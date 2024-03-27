@@ -48,9 +48,9 @@ st.markdown("<h2 style='text-align: center;'>⬇️ ⬇️</h2>", unsafe_allow_h
 st.markdown("<h2 style='text-align: center;'>PORTOFOLIO</h2>", unsafe_allow_html=True)
 
 # Assuming the 'Portofolio' folder is in the same directory as your Streamlit script.
-# Dynamically generate the list of MP4 file paths
+# Dynamically generate the list of MP4 file paths, sorted alphabetically
 portofolio_folder = 'Portofolio'
-mp4_files = [os.path.join(portofolio_folder, file) for file in os.listdir(portofolio_folder) if file.endswith('.mp4')]
+mp4_files = sorted([os.path.join(portofolio_folder, file) for file in os.listdir(portofolio_folder) if file.endswith('.mp4')])
 
 # Function to display the MP4 based on index
 def display_mp4(file_path):
